@@ -1,0 +1,6 @@
+To use this program, create a control file. The control can be one sample from the data set. 
+Enter how many samples and how many genes there will be in the data file 
+The Program will then compare the samples to the control file and find the difference between each gene of the control and the gene of each of the samples 
+The closer to 0 the sample is to the control, the more similar the sample is to the control. 
+The program averages the differences to calculate the sychScore. The closer to 0 the number is, the more synchrocity the data is. Lower number is better. 
+The program will output the differences in an output file for additional information about the genes. 
