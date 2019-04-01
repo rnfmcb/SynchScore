@@ -40,14 +40,13 @@ int main(){
      getline(cin,controlFile);
 
 	//Open control file and fill the control vector  
-	double num = 0.0;  
+	int num = 0;   
 	control.open(controlFile.c_str()); 
 	if(control.is_open()) { 
-		while(control >> num) { 
-			int i; 
-			for(i = 0; i < gene; i++){ 
-				controlArray[i] = num; 
-			} 
+		while(!control.eof()) {
+		
+			control >> controlArray[num];
+			num++;  
 		} 
 	} 
 	//Test control file values 
