@@ -53,7 +53,8 @@ int main(){
 	//Test control file values 
 	cout << "Control values " << endl; 
 	for(int i = 0; i < gene;  i++) { 
-		cout << controlArray[i] << 
+
+		cout << controlArray[i] << ' ';  
 	} 
 	cout << endl; 
 

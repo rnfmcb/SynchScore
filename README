@@ -4,8 +4,8 @@ Rachel Festervand April 1, 2019
 *****************Instructions******************************
 To use this program, create a control file. The control can be one sample from the data set. 
 	The control and Data file should not have any alphabetic charactors.
-	The name of the Data file is data.txt. Currently, it has 4 samples and 
-	2 genes. The file corresponding to the data is testControl.txt
+	The name of the Data file is data.txt. Currently, it has 10 samples and 
+	5 genes. The file corresponding to the data is control.txt
 	Samples are columns and genes are rows.   
 Enter how many samples and how many genes there will be in the data file 
 The Program will then compare the samples to the control file and find the difference between each gene of the control and the gene of each of the samples 
