@@ -9,12 +9,13 @@
 #include <string> 
 #include <vector> 
 #include <cstdlib>  
+#include <stdlib.h> 
+#include <stdio.h> 
  
 using namespace std; 
 
 int main(){ 
-	ifstream control; 
-	ifstream data; 
+	ifstream control;  
 	string controlFile; 
 	string testFile;
 	int sample,gene;    
@@ -50,33 +51,45 @@ int main(){
 		} 
 	} 
 	//Test control file values 
+	cout << "Control values " << endl; 
 	for(int i = 0; i < gene;  i++) { 
-		cout << controlArray[i] << endl; 
+		cout << controlArray[i] << 
 	} 
+	cout << endl; 
 
     control.close(); 
 
-	cout <<"Please enter the data file name " << endl;
+	/*cout <<"Please enter the data file name " << endl;
 	cin.ignore(); 
-    getline(cin,testFile);
+    getline(cin,testFile);*/
+   
 
 	//Open data file and fill the data vector
-	num = 0.0;  
-	data.open(testFile.c_str()); 
-	if(data.is_open()){ 
-		while(data >> num){
-			int i, j;  
-			for(i = 0; i < gene; i++) { 
-				for( j = 0; j < sample; j++){ 
-				   dataArray[i][j] = num; 
+    ifstream data("data.txt");   
+	if(!data.is_open()) { 
+		cout << "Error opening file " << endl; 
+	    exit(EXIT_FAILURE); 
+	}  	
+		while(!data.eof()){
+			for(int i = 0; i < gene; i++) { 
+				for(int j = 0; j < sample; j++){ 
+				   data >> dataArray[i][j]; 
 				}
 			} 
-		} 
-	}  
-			
+		 	 
+        }     
+		//Test input file 
+		cout << "Data file " << endl; 
+		for (int i = 0; i < gene; ++i) {
+    	    for (int j = 0; j < sample; ++j){
+        	    cout << dataArray[i][j] << ' ';
+       		 }
+        cout << endl;
+   		 }			
     data.close(); 
     obj.getSychScore(dataArray,controlArray,gene,sample); 
-
+    
+ 
 return 0; 
 }
  
