@@ -6,9 +6,11 @@
 #define SYCH_H
  
 class Sych { 
-
-	public: 
+	public:   
+		void getSychScore(double**,double[],int,int);
+		int findDiff(int,int); 
 		Sych(); 
+	 
 }; 
 
 

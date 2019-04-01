@@ -1,6 +1,38 @@
-To use this program, create a control file. The control can be one sample from the data set. 
+Rachel Festervand April 1, 2019 
+
+
+*****************Instructions******************************
+To use this program, create a control file. The control can be one sample from the data set.
+	The control and Data  file should not have any alphabetic charactors.  
 Enter how many samples and how many genes there will be in the data file 
 The Program will then compare the samples to the control file and find the difference between each gene of the control and the gene of each of the samples 
 The closer to 0 the sample is to the control, the more similar the sample is to the control. 
 The program averages the differences to calculate the sychScore. The closer to 0 the number is, the more synchrocity the data is. Lower number is better. 
-The program will output the differences in an output file for additional information about the genes. 
+The program will output the sychScore.  
+
+****************Additional Ideas****************************
+I went with the simpliest way to get a sych score, but I have additional ideas for using my method. 
+Output a chart to display differences
+	I think this could be used to determine patterns or to find samples that are the most similar to the control. 
+Add averages for each sample row 
+	I think the program could be used to find samples that are the most like the control, rerun the program and delete samples that have a higher average, 
+	meaning they are further away from the control.This could potentionally be used for clustering data.  
+Control can be adapted 
+	Control can be adapted to whatever gene rows are needed
+	Control can be changed by running different sets with different samples from the data and analizing the results.  
+Large data sets 
+	Program could read in sections of a file, keep an array of averages for each section and then average the average array for a sych score.
+	May be useful to output each section in a file for pattern recognition. It may also be useful to output each average for each processed section, to see if there	is more synchrocity in sections of the data. 
+	Program coult output each section in a file as sections of data are processed the information so the data doesn't have to be stored in memory. 
+
+****************Background of ideas****************************
+First, I thought that much was missed by rounding values, so that is where finding the difference originated from.
+ I was also trying to solve the large data problem as there are so many genes. 
+
+Most of my project is my own idea. I developed my idea when I thought of how I would try to figure out what genes are needed for Alzheimers.
+I would need to have a way to find patterns. I would want a way to compare the gene data from someone with Alzheimers to other samples. I could take a known sample of someone as a control. Then run the control against a large sample of others with the disease to see if I could find a pattern. I would then narrow down the control sample of the similar rows and run the program again. I could then run that control against a collection of samples from children of those with alzheimers and follow their health history to see if they develop the disease. 
+
+****************Source*******************************************
+I am quite familure with C++, so most of the coding is my own. I did need to lookup 2D Arrays. 
+https://www.geeksforgeeks.org/pass-2d-array-parameter-c/
+https://stackoverflow.com/questions/8767166/passing-a-2d-array-to-a-c-function
